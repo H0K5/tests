@@ -1,0 +1,23 @@
+PS D:\del\P4wnP1\powershell> D:\del\P4wnP1\powershell\enum.ps1
+Path: \\?\hid#vid_1d6b&pid_fdde&mi_02#8&2324206c&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
+Invalid handle
+Path: \\?\hid#vid_1d6b&pid_fdde&mi_03#8&b609427&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
+Input: 65, Output: 0
+Path: \\?\hid#vid_1d6b&pid_fdde&mi_04#8&2f37d1e9&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}
+Input: 0, Output: 65
+Writing 1000 reports with synchronous 'Write'
+ Hello World                                                     
+ Hello World                                                     
+ .. snip ... (1000 Hello World from output thread, echoed back by bash via cat /dev/hidg2 > /dev/hidg1)
+ Hello World                                                     
+HID out thread finfished, time taken 8,1890945 seconds
+Writing 1000 reports with async 'BeginWrite', 8 concurrent writes
+ Hello World                                                     
+ .. snip ... (1000 Hello World from output thread, echoed back by bash via cat /dev/hidg2 > /dev/hidg1)
+ Hello World                                                     
+HID concurrent output thread finfished, time taken 7,9576403 seconds
+Killing remaining threads
+ Hello World                                                     
+Godbye
+
+____________________________________________________________________________________________________________________________________________________________________________________
