@@ -623,7 +623,7 @@ function TEST_enqueue_ouput($qout, $stream_size, $max_bytes)
 {
     [System.Console]::WriteLine("Enqueue $max_bytes Bytes output data split into streams of $stream_size bytes, each...")
 
-    for ($i = 0; $i -lt 2000; $i++)
+    for ($i = 0; $i -lt ($max_bytes/$stream_size); $i++)
     {
         $utf8_msg = "Stream Nr. $i from Powershell, size $stream_size (filled up with As) ..."
         $fill = "A" * ($stream_size - $utf8_msg.Length)
