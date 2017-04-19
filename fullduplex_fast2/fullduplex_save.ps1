@@ -2,14 +2,6 @@
 # Build methods to create filestream to HID device (stage 1 work)
 #################################################################
 
-# Test case: Am I able to split away stage1 (keyboard typeout) from
-# stegae to (loaded via HID) after having several drinks (Whisky)
-# ToDo: LinkLayer has to flow in from stage 2, stage 1 nnéeds simple
-# proto to fetch stage 2
-# Idea: let connection syncing deliver payload in in heartbeat by alternating read/write without
-# sending right ACK (nobody understands that)
-# Idea 2: heartbeat (length 0) respond with payload
-
 
 $cs =@"
 using System;
